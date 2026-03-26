@@ -1,6 +1,6 @@
 import { Router, Request, Response } from "express";
 import { classesTable } from "../lib/db/src/schema";
-import { GetClassesResponse } from "../lib/api-zod/src";
+import { GetClassesResponse } from "../lib/api-zod/src/index.js";
 
 const router = Router();
 

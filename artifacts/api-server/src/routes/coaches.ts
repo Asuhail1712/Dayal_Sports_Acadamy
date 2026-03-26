@@ -1,6 +1,6 @@
 import { Router, Request, Response } from "express";
 import { coachesTable } from "../lib/db/src/schema";
-import { GetCoachesResponse } from "../lib/api-zod/src";
+import { GetCoachesResponse } from "../lib/api-zod/src/index.js";
 
 const router = Router();
 
