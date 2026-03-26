@@ -1,20 +1,10 @@
 import "dotenv/config";
 import app from "./app.js";
 
-console.log("ENV PORT:", process.env.PORT);
+// Use Render's PORT or fallback to 3001 for local
+const port = Number(process.env.PORT) || 3001;
 
-const rawPort = process.env["PORT"];
-
-if (!rawPort) {
-  throw new Error("PORT environment variable is required but was not provided.");
-}
-
-const port = Number(rawPort);
-
-if (Number.isNaN(port) || port <= 0) {
-  throw new Error(`Invalid PORT value: "${rawPort}"`);
-}
-
+// Start server
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
