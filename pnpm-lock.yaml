@@ -181,9 +181,6 @@ importers:
       '@types/nodemailer':
         specifier: ^7.0.11
         version: 7.0.11
-      '@workspace/api-zod':
-        specifier: workspace:*
-        version: link:../../lib/api-zod
       cookie-parser:
         specifier: ^1.4.7
         version: 1.4.7
