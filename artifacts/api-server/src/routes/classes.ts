@@ -1,5 +1,5 @@
 import { Router, Request, Response } from "express";
-import { classesTable } from "../lib/db/src/schema";
+import { classesTable } from "../lib/db/src/schema/index.js";
 import { GetClassesResponse } from "../lib/api-zod/src/index.js";
 
 const router = Router();
@@ -13,7 +13,7 @@ router.get("/classes", async (_req: Request, res: Response): Promise<void> => {
       return;
     }
 
-    const { db } = await import("../lib/db/src");
+    const { db } = await import("../lib/db/src/index.js");
 
     const classes = await db
       .select()
