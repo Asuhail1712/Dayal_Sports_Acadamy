@@ -178,9 +178,6 @@ importers:
 
   artifacts/api-server:
     dependencies:
-      '@types/nodemailer':
-        specifier: ^7.0.11
-        version: 7.0.11
       cookie-parser:
         specifier: ^1.4.7
         version: 1.4.7
@@ -209,7 +206,7 @@ importers:
         specifier: ^8.20.0
         version: 8.20.0
       zod:
-        specifier: 'catalog:'
+        specifier: ^3
         version: 3.25.76
     devDependencies:
       '@types/cookie-parser':
@@ -224,6 +221,9 @@ importers:
       '@types/node':
         specifier: ^20.0.0
         version: 20.19.37
+      '@types/nodemailer':
+        specifier: ^7.0.11
+        version: 7.0.11
       '@types/pg':
         specifier: ^8.18.0
         version: 8.18.0
