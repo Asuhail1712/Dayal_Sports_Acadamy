@@ -1,13 +1,12 @@
 import { Router, Request, Response } from "express";
-import { coachesTable } from "../lib/db/src/schema/index.js";
-import { GetCoachesResponse } from "../lib/api-zod/src/index.js";
+import { db } from "@workspace/db";
+import { coachesTable } from "@workspace/db/schema";
+import { GetCoachesResponse } from "@workspace/api-zod";
 
 const router = Router();
 
 router.get("/coaches", async (_req: Request, res: Response) => {
   try {
-    const { db } = await import("../lib/db/src/index.js");
-
     const coaches = await db
       .select()
       .from(coachesTable)
